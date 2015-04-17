@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Solar System with Moving Camera and Phong Lighting </title>
+  </head>
+
+  <body onload="main()" onresize="winResize()">
+    <canvas id="webgl" width="400" height="400">
+<!-- NOTE:  We don't use these initial 'width' and 'height' settings at all, 
+		because 
+		our 'main()' function immediately calls the winResize() function,
+		which adjusts canvas width,height to fill the browser window.
+-->
+    Please use a browser that supports "canvas"
+    </canvas>
+    <input type="text" id='amb' value= "Type in any value" size=20> 
+    <button type="button" onclick="toggleAmb()">Ambient</button>
+    <input type="text" id='diff' value= "Type in any value" size=20> 
+    <button type="button" onclick="toggleDiff()">Diffuse</button>
+    <input type="text" id='spec' value= "Type in any value" size=20> 
+    <button type="button" onclick="toggleSpec()">Specular</button> <br>
+
+    <input type="text" id='lampX' value= "Type in any value" size=20> 
+    <input type="text" id='lampY' value= "Type in any value" size=20> 
+    <input type="text" id='lampZ' value= "Type in any value" size=20> 
+    <button type="button" onclick="togglePos()">Position</button><br>
+
+    <p>Hello and Welcome to my Solar Space Model. In order to control the camera, press the left arrow key to strafe left, the right arrow key to strafe right, the back arrow key to move backward, and the front arrow key to move forward. Using the forward key, the user can also dive and fly according to the tilt. All the arrow key directions change with the rotation. The back, left, and right arrow keys stay on the same z level for ease of navigation. The D key rotates the camera to the right and the A key rotates the camera to the left. The S key tilts the camera lower, and the W key tilts the camera higher. The user may also control one of the lamps in the model. Place a value between 0 and 1 in the Ambient, Diffuse, and Specular input boxes and press the corresponding buttons to turn those light components on to the value desired. To change the position of the lamp, put in x, y, z values respectively in the position input boxes and then press the Position button to move the lamp to a desired point. There is also a headlight on the camera.
+</p>
+
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+    <script src="RheeJason_ProjC.js"></script>
+  </body>
+</html>
