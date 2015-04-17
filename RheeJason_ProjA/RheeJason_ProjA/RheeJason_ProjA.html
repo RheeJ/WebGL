@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>
+			Solar System with a Growing Planet and a Spacecraft
+		</title>
+	</head>
+	<body onload="main()">
+		<canvas id="webgl" height="400" width="400"></canvas>
+        <p>
+            <button type="button" onclick="pauseandplay()"> Pause and Play</button>
+            <input type="text" id='newangle' value= "Type in any integer" size=20> 
+		    <button type="button" onClick='angleForm()'>Submit</button><BR> 
+        </p>
+        <p>
+            Hello! There are many user inputs in this model of the Solar System. Press "Pause and Play
+            to pause and play the animation. Enter an angle value integer in degrees into the input box and press submit to change the speed of rotation.
+            Higher values will spin the the entire model faster counterclockwise. Lower values will spin the entire model faster clockwise.
+            There are also keyboard and mouse inputs as well. Pressing left on the keyboard will spin the entire model clockwise. Pressing right
+            on the keyboard will spin the model faster counterclockwise. Clicking on the canvas with the left mouse button, moving the cursor with the left mouse button held down
+            and releasing the left mouse button within the canvas will move the planetary system towards the cursor. It will not move the spacecraft. To move the spacecraft press 
+            the up arrow key to accelerate it towards the left and the down arry key to accelerate it towards the right. There is also a planet that starts out as a dot and grows 
+            through time until it reaches a certain size. Enjoy!
+        </p>
+		<script src="lib/webgl-utils.js"></script>
+		<script src="lib/webgl-debug.js"></script>
+		<script src="lib/cuon-utils.js"></script>
+		<script src="lib/cuon-matrix-mod.js"></script>
+		<script src="RheeJason_ProjA.js"></script>
+	</body>
+</html>
