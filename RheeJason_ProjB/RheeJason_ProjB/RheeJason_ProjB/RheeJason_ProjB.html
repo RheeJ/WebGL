@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Solar System with Moving Camera and Overhead Shading </title>
+  </head>
+
+  <body onload="main()" onresize="winResize()">
+    <canvas id="webgl" width="400" height="400">
+<!-- NOTE:  We don't use these initial 'width' and 'height' settings at all, 
+		because 
+		our 'main()' function immediately calls the winResize() function,
+		which adjusts canvas width,height to fill the browser window.
+-->
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p><input type="text" id='newangle' value= "Type in any integer" size=20> 
+        <button type="button" onClick='angleForm()'>Submit</button><BR> 
+        </p>
+	<p>Use the arrow keys to navigate through the world. Up key moves camera forward and climbs or dives depending on the tilt. Back key moves camera straight back on the same height plane. Left Key strafes camera to the left. Right key strafes camera to the right. The z key rotates camera left. The x key rotates camer right. The space bar tilts the camera up. The shift key tilts the camera down. Type an integer into the box and press submit button to rotate orbits at different speeds. The more positive a number, the faster the counterclockwise rotation.</p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+    <script src="RheeJason_ProjB.js"></script>
+  </body>
+</html>
