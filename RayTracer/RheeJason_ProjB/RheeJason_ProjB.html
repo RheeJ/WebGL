@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ray Tracing</title>
+  </head>
+  <body onload="main()" onresize="browserResize()">
+    <canvas id="webgl" width="800" height="800">
+    Please use a browser that supports "canvas.
+    </canvas>
+	<p>
+		<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+			 (where? look inside main(), inside its 'tick()' function, where we
+			 display the 'current angle' value.
+		-->
+		<div id=TraceTrigger></div>
+		<!-- Next, a simple block of text:
+		-->
+		Press the 'p' to switch between Normal Ray Tracing and 4x4 Jittered Anti Alias.
+	    Press the 'T' key  (SHIFT-t) to ray-trace our first scene.
+	    Press the 'E' key to ray-trace our second scene.  
+	    Use the arrow keys to navigate the WebGL preview. The up arrow key alters height according to tilt.
+	    Use the WASD keys to rotate and tilt in the WebGL preview.
+	    Press the light buttons to turn them on and off.
+	    Put in the x,y,z coordinates to position the lights.
+	    The light controls are for the first scene. Reload the trace in order to see the change.
+	</p>
+	<input type="text" id='lamp1x' value= "Type in any value" size=20> 
+	<input type="text" id='lamp1y' value= "Type in any value" size=20> 
+	<input type="text" id='lamp1z' value= "Type in any value" size=20> 
+	<button type="button" onclick="togglePos1()">Lamp1Pos</button>
+    <button type="button" onclick="toggleLamp1()">Lamp1On/Off</button> <br>
+    <input type="text" id='lamp2x' value= "Type in any value" size=20> 
+	<input type="text" id='lamp2y' value= "Type in any value" size=20> 
+	<input type="text" id='lamp2z' value= "Type in any value" size=20>
+	<button type="button" onclick="togglePos2()">Lamp2Pos</button>
+    <button type="button" onclick="toggleLamp2()">Lamp2On/Off</button>
+	<script>
+		var isAA = false;
+		var lamp1On = true;
+		var lamp2On = true;
+		var l1i = 1;
+		var l2i = 1;
+		var l1x = 0; var l1y = 0; var l1z = 10;
+		var l2x = 5; var l2y = 0; var l2z = 5;
+	</script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script> 	<! JT modified to add quaternions -->
+	<script src="../lib/glMatrix.js"></script> 			<! SEE: http://glmatrix.net/ fast vector/matrix lib for webGL  -->
+	<script src="SR_RheeJason_ProjB.js"></script> 				<! JT ray-tracing library -->
+    <script src="RheeJason_ProjB.js"></script>
+  </body>
+</html>
