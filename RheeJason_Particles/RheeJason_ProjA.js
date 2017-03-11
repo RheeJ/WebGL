@@ -68,7 +68,7 @@ var partCount3 = 285;
 var gndVerts = 485;
 var myRunMode = 0;
 var INIT_VEL = 0.20;
-var current = 0;
+var current = 1;
 var sp = new Float32Array((partCountp0 + partCount0 + partCount1 + partCount2 + partCount3 + gndVerts) * PART_MAXVAR);
 var s0 = new Float32Array((partCountp0 + partCount0 + partCount1 + partCount2 + partCount3 + gndVerts) * PART_MAXVAR);
 var s0dot = new Float32Array((partCountp0 + partCount0 + partCount1 + partCount2 + partCount3 + gndVerts) * PART_MAXVAR);
@@ -389,7 +389,7 @@ function PartSys_render(gl, s) {
   	gl.bufferSubData(gl.ARRAY_BUFFER, 0, s0);
     current = 1;
   }	// Data source (Javascript array)
-  gl.drawArrays(gl.POINTS, 0, 30);	
+  gl.drawArrays(gl.POINTS, 0, partCount3);	
   // drawing primitive, starting index, number of indices to render
 }
 function Constraints(s){
